@@ -1,9 +1,7 @@
-<p id="notice"><%= notice %></p>
+<h1 class = "text-center mb-3">Friends List</h1>
 
-<h1>Friends</h1>
-
-<table>
-  <thead>
+<table class="table table-bordered table-striped table-hover">
+  <thead class="table-dark">
     <tr>
       <th>First name</th>
       <th>Last name</th>
@@ -22,14 +20,15 @@
         <td><%= friend.age %></td>
         <td><%= friend.email %></td>
         <td><%= friend.phone %></td>
-        <td><%= link_to 'Show', friend %></td>
-        <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
-        <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', friend, class:"btn btn-info btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_friend_path(friend), class:"btn btn-warning btn-sm" %></td>
+        <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Friend', new_friend_path %>
+<div class="text-center">
+  <%= link_to '[Add New Friend]', new_friend_path, class:"btn btn-success text-center" %>
+</div>

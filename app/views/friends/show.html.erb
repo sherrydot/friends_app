@@ -1,29 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="card text-center mt-5">
+  <div class="card-header">
+    <h5 class="card-title">  
+      <%= @friend.first_name %>
+      <%= @friend.last_name %>
+    </h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <strong>Age:</strong>
+      <%= @friend.age %> |
 
-<p>
-  <strong>First name:</strong>
-  <%= @friend.first_name %>
-</p>
+      <strong>Email:</strong>
+      <%= @friend.email %> |
+      
+      <strong>Phone:</strong>
+      <%= @friend.phone %>
+    </p>
+    <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-warning btn-sm" %>
+    <%= link_to 'Back', friends_path, class:"btn btn-info btn-sm" %>
+    <%= link_to 'Destroy', @friends, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-sm" %>
+  </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @friend.last_name %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @friend.age %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @friend.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @friend.phone %>
-</p>
-
-<%= link_to 'Edit', edit_friend_path(@friend) %> |
-<%= link_to 'Back', friends_path %>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
