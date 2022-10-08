@@ -1,6 +1,6 @@
 <h1 class = "text-center mb-3">Friends List</h1>
 
-<table class="table table-bordered table-striped table-hover">
+<table class="table table-bordered table-hover">
   <thead class="table-dark">
     <tr>
       <th>First name</th>
@@ -29,6 +29,8 @@
 </table>
 
 <br>
+<% if user_signed_in? %>
 <div class="text-center">
-  <%= link_to '[Add New Friend]', new_friend_path, class:"btn btn-success text-center" %>
+  <%= link_to 'Add New Friend', new_friend_path, class:"btn btn-success text-center" %>
 </div>
+<%end%>
